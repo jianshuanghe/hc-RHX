@@ -1,0 +1,568 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font-weight: normal
+  vertical-align: baseline
+  box-sizing: border-box
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+input, textarea
+  outline: none
+
+/* custom */
+
+a
+  color: #7e8c8d
+  -webkit-backface-visibility: hidden
+  text-decoration: none
+
+li
+  list-style: none
+
+body
+  -webkit-text-size-adjust: none
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+// 覆盖cude样式
+.cube-dialog-main{width:6.5rem !important;border-radius:0.1rem !important;}
+.cube-dialog-title{font-size:0.42rem !important;}
+.cube-dialog-title-def,.cube-dialog-content-def>p,.cube-dialog-btn,.cube-toast-tip{font-weight:300;}
+.cube-dialog-content{font-size:0.37rem !important;margin:0.5rem 0!important;}
+.cube-dialog-btn{font-size:0.42rem !important;padding:0.3rem 0.3rem !important;}
+.cube-dialog-title+.cube-dialog-content{margin-top:0.4rem !important}
+.cube-loading{font-size:0.8rem !important;}
+.cube-toast-tip{line-height:.52rem;font-size:0.36rem !important;}
+.cube-toast .cube-popup-content{border-radius:0.1rem !important;background-color:rgba(37,38,45,.8)}
+.cube-toast-icon{width:0.64rem !important;height:0.64rem !important;font-size:0.64rem !important;}
+.border-top-1px:before{border-top:0.05rem solid #ebebeb !important;}
+.border-right-1px:after{border-right:0.05rem solid #ebebeb !important;}
+/* button tab */
+
+// 评分星星颜色
+.vux-rater-box.is-active {
+    color: #02c2a2 !important;
+}
+
+        // .feedUpload .cube-upload-btn{
+        //     display: none; // 隐藏cube默认的上传按钮，使用自定义模式的上传按钮，因为默认的上传按钮在安卓环境调不到相机
+        // }
+
+        .vux-button-group>a {
+            height: 0.676056rem !important;
+            line-height: 0.676056rem !important;
+        }
+
+        .vux-button-group>a.vux-button-tab-item-first:after {
+            content: '';
+            border: 0 !important;
+        }
+
+        .vux-button-group>a.vux-button-tab-item-middle:after {
+            content: '';
+            border: 0 !important;
+        }
+
+        .vux-button-group>a.vux-button-tab-item-last:after {
+            content: '';
+            border: 0 !important;
+        }
+        /* star */
+
+        .vux-rater-box {
+            color: rgb(204, 204, 204);
+            margin-right: .266667rem !important;
+            font-size: .666667rem !important;
+            width: .666667rem !important;
+            height: .666667rem !important;
+            line-height: .533333rem !important;
+        }
+
+        .vux-rater-inner span {
+            font-size: .586667rem
+        }
+        /* // upload */
+
+        .uploadImg .cube-upload {
+            margin: .266667rem 0;
+            position: relative;
+        }
+
+        .dingzhiUpImg .cube-upload{
+            width: 2.666667rem;
+            height: 2.666667rem;
+        }
+        .dingzhiUpImg .cube-upload-btn-def{
+            width: 2.666667rem !important;
+            height: 2.666667rem !important;
+        }
+
+        .uploadImg .cube-upload-def {
+            margin-right: -.266667rem;
+        }
+
+        .uploadImg .cube-upload-btn {
+            float: left;
+            margin: 0rem .266667rem .266667rem 0rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .uploadImg .cube-upload-btn-def {
+            width: 2.133333rem;
+            height: 2.133333rem;
+            border: .026667rem solid #bdbdbd;
+            position: relative;
+            border-radius: .053333rem;
+        }
+
+        .uploadImg .cube-upload-btn-def,
+        .uploadImg .cube-upload-btn-def::after {
+            box-sizing: border-box;
+        }
+
+        .uploadImg .cube-upload-btn-def>i::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: .533333rem;
+            height: .053333rem;
+            transform: translate(-50%, -50%);
+            background-color: rgb(102, 102, 102);
+        }
+
+        .uploadImg .cube-upload-btn-def>i::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: .533333rem;
+            height: .053333rem;
+            transform: translate(-50%, -50%);
+            background-color: rgb(102, 102, 102);
+        }
+
+        .uploadImg .cube-upload-btn-def>i::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        .uploadImg .cube-upload-input {
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            right: 0rem;
+            bottom: 0rem;
+            width: 100%;
+            font-size: 0rem;
+            opacity: 0;
+        }
+
+        .uploadImg .clear-fix:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .uploadImg .cube-upload-def .cube-upload-btn,
+        .uploadImg .cube-upload-def .cube-upload-file {
+            float: left;
+            margin: 0 .2rem .2rem 0;
+        }
+
+        .uploadImg .cube-upload-file {
+            position: relative;
+            float: left;
+        }
+        .erweima .cube-upload-file-def>.cubeic-wrong {
+            display: none;
+        }
+        .touxiang .cube-upload-file-def>.cubeic-wrong {
+            display: none;
+        }
+        .uploadImg .cube-upload-file-def>.cubeic-wrong {
+            position: absolute;
+            z-index: 2;
+            top: -.053333rem;
+            right: -.053333rem;
+            color: rgba(0, 0, 0, .8);
+            font-size: .426667rem;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .uploadImg .cube-upload-file-def {
+            position: relative;
+            width: 2.133333rem;
+            height: 2.133333rem;
+            box-sizing: border-box;
+            background: #fff no-repeat 50%;
+            background-size: cover;
+            border-radius: .053333rem;
+        }
+
+        .uploadImg .cube-upload-file-def>.cubeic-wrong {
+            position: absolute;
+            z-index: 2;
+            top: -.186667rem;
+            right: -.186667rem;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: .426667rem;
+            background-color: #fff;
+            border-radius: 50%;
+            line-height: .373333rem;
+        }
+
+        .uploadImg .cube-upload-file-def>.cubeic-wrong:before {
+            width: .373333rem;
+            height: .373333rem;
+            display: inline-block;
+            background: #000;
+            opacity: .5;
+            color: #fff;
+            border-radius: 50%;
+            line-height: .35rem;
+        }
+
+        .uploadImg .cubeic-wrong:before {
+            width: 100%;
+            content: "×";
+            text-align: center;
+            font-size: .373333rem;
+            font-style: normal;
+        }
+
+        .uploadImg .cube-upload-file-state {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 0;
+            background-color: rgba(37, 38, 45, 0.4);
+            border-radius: .053333rem;
+            -webkit-transition: opacity 0.1s;
+            transition: opacity 0.1s;
+        }
+
+        .uploadImg .cube-upload-file-state:before {
+            content: '.';
+            position: relative;
+            left: -50%;
+            display: block;
+            width: .026667rem;
+            height: .026667rem;
+            margin-left: -.026667rem;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .uploadImg .cube-upload-file-status.cubeic-warn {
+            display: block;
+            color: #f43530;
+        }
+
+        .uploadImg .cube-upload-file-status {
+            position: relative;
+            z-index: 1;
+            font-size: .8rem;
+            display: none;
+        }
+
+        .uploadImg .cubeic-warn:before {
+            content: '\E614';
+        }
+
+        .uploadImg .cube-upload-file-status.cubeic-right:after,
+        .uploadImg .cube-upload-file-status.cubeic-warn:after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 0.56em;
+            height: 0.56em;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .uploadImg .cube-upload-file-status.cubeic-right+.cube-upload-file-progress,
+        .uploadImg .cube-upload-file-status.cubeic-warn+.cube-upload-file-progress {
+            display: none;
+        }
+
+        .uploadImg .cube-upload-file-progress {
+            color: #fff;
+            font-size: .533333rem;
+        }
+        /* // upload end */
+        /* 修改cube默认样式 */
+        .erweima .cube-upload-btn>div {
+            width: 0.373333rem !important;
+            height: 0.373333rem !important;
+        }
+
+        .touImg .cube-upload-file-def {
+            background-size: 100% 100%;
+            border-radius: 50% !important;
+        }
+
+        .touxiang .cube-upload-input {
+            width: 1.066667rem;
+            height: 1.066667rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .pop .cube-upload-btn{
+            width 100%
+            height 120px
+            border 1px solid #e2e2e2
+            margin-top 20px
+            display flex
+            justify-content: space-between;
+            align-items: center;
+            text-align center
+        }
+
+        .pop .cube-upload-input{
+            width 100%
+            height 120px
+        }
+
+        .pop-img{
+            margin-top 20px
+        }
+
+        .pop-img .cube-upload-file-def{
+            width 100%
+            height 120px
+        }
+
+        .erweima .cube-upload .cube-upload-btn {
+            width: 0.373333rem !important;
+            height: 0.373333rem !important;
+        }
+
+        .erweima .cube-upload-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 0.373333rem;
+            height: 0.373333rem;
+        }
+
+        .myUpload .cube-upload-file-def {
+            width: 0.373333rem !important;
+            height: 0.373333rem !important;
+        }
+
+        .cube-upload-file_stat {
+            opacity: 0 !important;
+        }
+
+        .perInfoItemR .cube-input-field {
+            padding: 0 !important;
+            border: 0;
+            text-align: right;
+            white-space: nowrap;
+            font-family: PingFangSC-Regular;
+            color: #3C3C3F;
+        }
+
+        .cube-input_active {
+            border: 0 !important;
+            box-shadow: 0 !important;
+        }
+
+        .cube-input:after {
+            border: 0 !important
+        }
+
+        .cube-upload-file-state {
+            border-radius: 50% !important;
+            display: none
+        }
+
+        .cube-upload-file-def {
+            width: 1.066667rem;
+            height: 1.066667rem;
+            /* border-radius: 50%; */
+            background-size: 100%;
+        }
+        .tupianS .cube-upload-file-def {
+            width: 2.133333rem;
+            height: 2.133333rem;
+        }
+        .tupianC .cube-upload-file-def {
+            width: 100%;
+            height: 2.133333rem;
+        }
+/*.cube-picker-confirm, .cube-picker-cancel, .cube-picker-title-group, .cube-picker-title{
+    top 0 !important;
+    font-size: 0.426667rem !important;
+    line-height: 1.222rem;
+}
+.cube-popup-container{
+    zoom: 1
+}
+.cube-popup{
+    z-index: 99999999 !important;
+}
+.cube-picker-choose{
+    height: 1.222rem;
+    border-bottom: 1px solid #c5c5c5;
+}
+.cube-picker-panel{
+    height: 5.873rem;
+}
+.cube-picker-wheel-wrapper>div{
+    height: 4.873rem;
+}
+.border-top-1px{
+    //height: 3.3rem !important;
+}
+.cube-picker-wheel-item{
+    font-size: 0.426667rem !important;
+    height: 0.826667rem;
+    line-height: 0.826667rem;
+}
+.border-bottom-1px{
+    border-bottom: 1px solid #c5c5c5;
+    opacity: 0.5;
+}
+.border-top-1px{
+    border-top: 1px solid #c5c5c5;
+    opacity: 0.5;
+}
+.cube-picker-wheel-scroll{
+    top: 0 !important;
+}
+
+.cube-picker-content>.border-top-1px{
+   height: 4.1rem;
+}
+.cube-picker-content>.border-bottom-1px{
+   height: .85rem
+}
+.cube-popup{
+    z-index: 99999999 !important;
+}
+.cube-picker-content{
+    height: 5.873rem;
+    top: 62%;
+    margin-top: -2.936rem
+}*/
+.tupianC .cube-upload-input{
+    width 100%
+    height 100%
+}
+.cube-picker-choose{
+    justify-content: space-around;
+}
+.cube-picker-confirm{
+    top 0 !important;
+}
+.cube-safe-area-pb{
+    zoom: 1.5;
+    // transform: scale(2);
+    // height:4.8rem;
+}
+.cube-safe-area-pb .cube-picker-cancel{
+    // left: 2.516rem;
+}
+.cube-safe-area-pb .cube-picker-confirm{
+    // right: 2.516rem;
+}
+.cube-popup{
+    z-index: 99999999 !important;
+}
+
+.cube-picker-choose{
+    width: 100%;
+    display: flex;
+    
+}
+// select
+.dingzhi-caigou-text .cube-select:after{
+    display: none;
+}
+.dingzhi-caigou-text .cube-select-icon{
+    display: none;
+}
+.dingzhi-caigou-text .cube-select>span{
+    display: flex;
+    align-items: center;
+}
+ .cube-select{
+    display: flex;
+}
+// cube btn
+.dingzhi-caigou-text .cube-btn{
+    background: none;
+    font-size: 0.346667rem;
+    color: #2e2e30;
+    text-align: left;
+}
+
+// company
+.companyImg .cube-upload-input{
+    width 100%
+    height 100%
+}
+.companyImg .cube-upload-file{
+  width 100%
+  height 100%
+}
+.companyImg .cube-upload-file-def{
+  width 100%
+  height 100%
+}
+// 模块中没一项的编辑样式
+.MITEMS-WRAP:nth-child(1) .MMIT .MMIT-CON .MMIT-BTNS a:nth-child(2){display:none;}
+.MITEMS-WRAP:nth-last-child(1) .MMIT .MMIT-CON .MMIT-BTNS a:nth-last-child(1){display:none;}
+//.MITEMS-WRAP:nth-last-child(2) .MMIT .MMIT-CON .MMIT-BTNS a:nth-last-child(2){margin-right:0}
+

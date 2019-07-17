@@ -1,0 +1,15 @@
+.uploadImg .cube-upload-file-def {
+    width: 1.973333rem /* 74/37.5 */ !important;
+    height: 1.973333rem /* 74/37.5 */ !important;
+    box-shadow: 0 !important;
+}
+
+.uploadImg .cube-upload-btn-def {
+    width: 1.973333rem /* 74/37.5 */ !important;
+    height: 1.973333rem /* 74/37.5 */ !important;
+    box-shadow: 0 !important;
+}
+
+.questions .cube-textarea {
+    height: 1.6rem /* 60/37.5 */;
+}
