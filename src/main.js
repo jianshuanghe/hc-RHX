@@ -107,52 +107,52 @@ router.beforeEach((to, from, next) => {
     } else
       if (to.path == "/myInstructions") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }
 
     } else if (to.path == "/myMessage") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }
 
     } else if (to.path == "/adrmanage") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-          next("/tel")
+          next("/landRegistration")
         } else {
           next()
         }
 
       } else if (to.path == "/personalData") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }
     } else if (to.path == "/feedBack") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }
     } else if (to.path == "/editPerInfo") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }
     } else if (to.path == "/zhangHao") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }
     } else if (to.path == "/pubsucc") {
         if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') {
-            next("/tel")
+            next("/landRegistration")
         } else {
             next()
         }

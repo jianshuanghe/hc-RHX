@@ -97,3 +97,6 @@
 .mint-popup{
   z-index: 20001;
 }
+.mint-toast-text{
+  font-size: 4vw;
+}

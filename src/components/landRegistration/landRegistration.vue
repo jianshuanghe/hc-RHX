@@ -423,9 +423,9 @@
             let UUID = this.generateUUID(); // 用户唯一ID
             localStorage.setItem('UUID', UUID);
             if (this.EVN === 'production') {
-              window.location.href = this.apiProd2 + '/rest-rp/mbUser/goWxLogin?uuid=' + UUID;
+              window.location.href = this.apiProd2 + '/rest-rp/user/goWxLogin?uuid=' + UUID;
             } else {
-              window.location.href = this.api2 + '/rest-rp/mbUser/goWxLogin?uuid=' + UUID;
+              window.location.href = this.api2 + '/rest-rp/user/goWxLogin?uuid=' + UUID;
             }
           },
           generateUUID () { // 生成用户唯一ID

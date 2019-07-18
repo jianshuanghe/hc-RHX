@@ -2,17 +2,17 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-    // 路由页面懒加载
-    // 说明书骨架(2/4)
-import bindPhone from '@/components/landRegistration/bindPhone';
-import landRegistration from '@/components/landRegistration/landRegistration';
-import forgetPassWord from '@/components/landRegistration/forgetPassWord';
+// 路由页面懒加载
+// 说明书骨架(2/4)
 // 路由页面懒加载
 // 说明书骨架(2/4)
 
 import loading from '@/pages/home/home/Loading'
 import index from '@/pages/home/home/index';
 //登录注册
+import bindPhone from '@/components/landRegistration/bindPhone';
+import landRegistration from '@/components/landRegistration/landRegistration';
+import forgetPassWord from '@/components/landRegistration/forgetPassWord';
 
 // 空白页
 const helloWorld = resolve => require(['@/components/HelloWorld'], resolve) // text order

@@ -68,7 +68,9 @@ h1, h2, h3, h4, h5, h6, b {
     font-size: inherit;
     font-weight: 500
 }
-
+.weui-input{
+  font-size: 4vw !important;
+}
 q:before, q:after {
     content: ''
 }

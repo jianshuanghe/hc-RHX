@@ -7,24 +7,38 @@
       <router-view class="Router"></router-view>
       <!--</keep-alive>-->
     </transition>
+    <div >
+      <loading :show="loadingShow" text="请稍等..."></loading>
+    </div>
     <indexFooter v-if="this.$route.meta.tabbar"></indexFooter>
   </div>
 </template>
 
 <script>
   import indexFooter from "@/components/globalModules/indexFooter";
+  import { Loading } from 'vux';
+  import { mapGetters } from 'vuex';
   import $ from "jquery";
+  import { isWeiXin } from './utils/browserType.js';
   import 'common/fonts/iconfont.css'
   export default {
     name: "App",
-    components: {indexFooter},
+    components: {
+      Loading,
+      indexFooter
+    },
     data() {
       return {
         transitionName: "slide-left",
-        LOADING: ""
+        LOADING: "",
+        loadingShow: false
       };
     },
+    computed: {
+      ...mapGetters(['LOADINGSHOW'])
+    },
     created() {
+      isWeiXin();
       // localStorage.setItem('userId', '965'); // 测试，生产要关闭啊
       localStorage.setItem('token', '123687CA085E4C831CFF5ED492F5C6D86EBDAFD7D5852C4C1559FE7F9162D7B3E71155A0F793DB0E374'); // 测试，生产要关闭啊
       const that = this;
@@ -76,6 +90,13 @@
       }
     },
     watch: {
+      LOADINGSHOW: {
+        handler (a, b) {
+          console.log(a, b, 'loading数据vuex');
+          this.loadingShow = a.loadingShow; // 侦听loading
+        },
+        deep: true
+      },
       //使用watch 监听$router的变化
       $route(to, from) {
         //如果to索引大于from索引,判断为前进状态,反之则为后退状态

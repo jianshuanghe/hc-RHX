@@ -2,6 +2,10 @@
  * Created by caoziwen on 2017/12/28.
  */
 const state = {
+  loading: { // loading
+    loadingShow: false,
+    loadingText: '请稍等...'
+  },
   wx: {},// 微信签名等数据
   uinfo: {},// 拉取的个人中心用户信息
   editable: false, // 区分是否可编辑

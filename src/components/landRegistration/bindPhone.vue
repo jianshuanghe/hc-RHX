@@ -203,7 +203,7 @@
         if (this.EVN === 'production') {
           axios.defaults.baseURL = this.apiProd2;
         }
-        axios.post(this.api2 + '/rest-rp/mbUser/reg', params).then((response) => {
+        axios.post(this.api2 + '/rest-rp/user/reg', params).then((response) => {
           console.log(response);
           if (response.data.ret === '200') {
             this.$store.commit('setLoadingShow', false); // 更新vuex loading

@@ -4,43 +4,50 @@
 // 引入address
 var address = require('address');
 const path = require('path')
+var EVN = require('./evn')
 
+var target = {}
+
+if (EVN === 'test') {
+  target.api1 = 'http://10.158.41.45:8090'; // 短信
+  target.api2 = 'http://cydweb.natapp1.cc'; // 业务
+  target.api3 = 'http://img01.iambuyer.com'; // 图片
+} else if (EVN === 'localTest') {
+  target.api1 = 'http://10.158.41.45:8090'; // 短信
+  target.api2 = 'http://cydweb.natapp1.cc'; // 业务
+  target.api3 = 'http://img01.iambuyer.com'; // 图片
+} else {
+  target.api1 = 'http://api.iambuyer.com'; // 短信
+  target.api2 = 'http://api.ruhexiu.com'; // 业务
+  target.api3 = 'http://img01.iambuyer.com'; // 图片
+}
 module.exports = {
     dev: {
         // Paths
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        // proxyTable: {
-        //   '/api': {
-        //     target: 'http://cydweb.natapp1.cc', //开发环境
-        //     changeOrigin: true,
-        //     pathRewrite: {
-        //       '/api': 'http://cydweb.natapp1.cc'
-        //     }
-        //   }
-        // },
         proxyTable: { // 生产环境
-            '/api': {
-                target: 'http://api.ruhexiu.com',
-                changeOrigin: true,
-                pathRewrite: {
-                    '/api': 'http://api.ruhexiu.com'
-                }
-            },
-            '/api1': {
-              target: 'http://10.158.41.45:8090',
-              changeOrigin: true,
-              pathRewrite: {
-                '/api1': 'http://10.158.41.45:8090'
-              }
-            },
-            '/ap2': {
-              target: 'http://api.ruhexiu.com',
-              changeOrigin: true,
-              pathRewrite: {
-                '/api2': 'http://api.ruhexiu.com'
-              }
+          '/api2': {
+            target: target.api2,
+            changeOrigin: true,
+            pathRewrite: {
+              '^/api2': ''
             }
+          },
+          '/api1': {
+            target: target.api1,
+            changeOrigin: true,
+            pathRewrite: {
+              '^/api1': ''
+            }
+          },
+          '/api': {
+            target: target.api2,
+            changeOrigin: true,
+            pathRewrite: {
+              '^/api': ''
+            }
+          }
         },
 
         // Various Dev Server settings

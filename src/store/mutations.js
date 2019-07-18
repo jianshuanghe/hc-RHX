@@ -25,6 +25,10 @@ const mutations = {
   [types.SET_MODULE_ICON](state, MICON) {
     state.temp_data.module_icon = MICON
   },
+  setLoadingShow (state, info) {
+    console.log(info, 'setLoadingShow');
+    state.loading.loadingShow = info;
+  },
   // setML: (state,val)=>{state.moneyLists = val},
   setML(state,info){
     state.moneyList = info;

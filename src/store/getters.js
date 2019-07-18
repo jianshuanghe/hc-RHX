@@ -1,6 +1,8 @@
 /**
  * Created by caoziwen on 2018/05/26.
  */
+// 获取Loading
+export const LOADINGSHOW = state => state.loading;
 // 获取用户信息
 export const GET_UINFO = state => state.uinfo
 
