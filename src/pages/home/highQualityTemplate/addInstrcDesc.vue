@@ -218,7 +218,8 @@
                   this.instrcName,
                   this.LS.getItem('_IN_DATA').tempCon.banner[0].picUrl,
                   this.instrcDesc,
-                  JSON.stringify(this.LS.getItem('_IN_DATA'))
+                  JSON.stringify(this.LS.getItem('_IN_DATA')),
+                  this.LS.getItem('_IN_DATA').path
                 ).then((res) => {
                   console.log(res)
                   this.addMod(res);
@@ -363,7 +364,8 @@
               this.instrcName,
               this.LS.getItem('_IN_DATA').tempCon.banner[0].picUrl,
               this.instrcDesc,
-              JSON.stringify(this.LS.getItem('_IN_DATA'))
+              JSON.stringify(this.LS.getItem('_IN_DATA')),
+              this.LS.getItem('_IN_DATA').path
             ).then((res) => {
               console.log(res)
               console.log('跳过此项更新一波')

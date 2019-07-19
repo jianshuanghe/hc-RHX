@@ -1329,7 +1329,7 @@
     },
     radioCheck(e){ // 判断点击的是哪个链接按钮
       console.log(e)
-      this.checked = e
+      this.checked = e 
       this.checkItems = ''; // 定制字表为空
       this.wantAddBtnUrl = ''; // 定制字表选的为空
       this.wantAddBtnName = ''; // 定制字表选的为空

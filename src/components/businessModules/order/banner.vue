@@ -1984,6 +1984,9 @@
       },
       // 定制
       dingzhi() {
+        if (!LS.getItem("userId") || LS.getItem("userId") === 'undefined') { // 本地不存在登录信息
+          this.$router.push("/landRegistration")
+        }
         // if (this.$route.query.source) { // 从流量页面进入
         //   console.log('从商机进来');
         //   if (this.$route.query.source === 'FB') {

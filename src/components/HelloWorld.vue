@@ -33,7 +33,7 @@ export default {
         localStorage.setItem('userId', userId);
       }
       resolve();
-    });
+    }).catch(new Function());
     promise.then(function() { // 异步操作
       that.promiseJd = true;
     });

@@ -231,12 +231,13 @@ export function _pubInstrc(instrucTitle, bannerImg, tempId, instrucIntro, instru
  * @instrucIntro:说明书简介
  * @instrucId:说明书ID
  * */
-export function _updateInstrc(instrucId, instrucTitle, bannerImg, instrucIntro, context) {
+export function _updateInstrc(instrucId, instrucTitle, bannerImg, instrucIntro, context, urlName) {
   let params = {
     "instrucTitle": instrucTitle,
     "bannerImg": bannerImg,
     "instrucIntro": instrucIntro,
-    "context": context
+    "context": context,
+    "urlName": urlName
   }
   if (localStorage.getItem('custIdOne')) {
     params.custIdOne = localStorage.getItem('custIdOne');
